@@ -45,36 +45,36 @@ spec:
   ports:
   - name:  http
     port:  80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: nginx
-  # namespace: nginx-test
-  # annotations:
-    # (Optional): Annotations for the Ingress Controller
-    # -- ingress class is needed when traefik is not the default
-    # kubernetes.io/ingress.class: traefik
-    # ---
-    # -- entrypoint and tls configurations
-    # traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
-    # traefik.ingress.kubernetes.io/router.tls: "true"
-    # ---
-    # -- optional middlewares
-    # traefik.ingress.kubernetes.io/router.middlewares:your-middleware@kubernetescrd
-    # ---
-spec:
-  rules:
-  - host: nginx.carterlab.duckdns.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx
-            port:
-              number: 443
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: nginx
+#   # namespace: nginx-test
+#   # annotations:
+#     # (Optional): Annotations for the Ingress Controller
+#     # -- ingress class is needed when traefik is not the default
+#     # kubernetes.io/ingress.class: traefik
+#     # ---
+#     # -- entrypoint and tls configurations
+#     # traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
+#     # traefik.ingress.kubernetes.io/router.tls: "true"
+#     # ---
+#     # -- optional middlewares
+#     # traefik.ingress.kubernetes.io/router.middlewares:your-middleware@kubernetescrd
+#     # ---
+# spec:
+#   rules:
+#   - host: nginx.carterlab.duckdns.org
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: nginx
+#             port:
+#               number: 443
   # (Optional) TLS settings
   # tls:
   # - hosts:
