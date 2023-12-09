@@ -63,18 +63,18 @@ metadata:
     # -- optional middlewares
     # traefik.ingress.kubernetes.io/router.middlewares:your-middleware@kubernetescrd
     # ---
-spec:
-  rules:
-  - host: nginx.carterlab.duckdns.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx
-            port:
-              number: 443
+# spec:
+#   rules:
+#   - host: nginx.carterlab.duckdns.org
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: nginx
+#             port:
+#               number: 443
   # (Optional) TLS settings
   # tls:
   # - hosts:
